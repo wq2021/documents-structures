@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT toilettes (toilette+)>
+<!ELEMENT toilette (adresse, horaire, services, equipement)>
+
+<!ATTLIST toilette
+    type CDATA #REQUIRED
+    statut CDATA #IMPLIED>
+
+<!ELEMENT adresse (libelle, arrondissement)>
+<!ELEMENT libelle (#PCDATA)>
+<!ELEMENT arrondissement (#PCDATA)>
+
+<!ELEMENT horaire (#PCDATA)>
+
+<!ELEMENT services (acces-pmr, relais-bebe)>
+<!ELEMENT acces-pmr (#PCDATA)>
+<!ELEMENT relais-bebe (#PCDATA)>
+
+<!ELEMENT equipement (#PCDATA)>
