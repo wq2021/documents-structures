@@ -1,0 +1,15 @@
+<!ENTITY % id "id ID #REQUIRED">
+<!ENTITY % add "">
+<!ENTITY % add1 "Element1">
+<!ENTITY % add2 "Element4">
+<!ENTITY % add3 "| %add2;">
+<!ENTITY % mod SYSTEM "entity2.mod">
+<!ELEMENT Root (Element3, Element4, Element5)>
+<!ELEMENT Element1 EMPTY>
+<!ATTLIST Element1 %id;>
+<!ELEMENT Element2 EMPTY>
+<!ATTLIST Element2 %id;>
+<!ELEMENT %add2; EMPTY>
+<!ATTLIST %add2; %id;>
+<!ELEMENT Element3 (#PCDATA | Element2 %add; | %add1; %add3;)*>
+%mod;
