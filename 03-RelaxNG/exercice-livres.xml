@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="exercice-livres.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<bibliotheque>
+    <etagere type="sf">
+        <livre isbn="001" prix="15.99">
+            <titre>Le problème à trois corps</titre>
+            <auteur nom="Liu" prenom="Cixin"/>
+        </livre>
+        <livre isbn="002" prix="10.00">
+            <titre>La ménagerie de papier</titre>
+            <auteur>
+                <nom>Liu</nom>
+                <prenom>Ken</prenom>
+            </auteur>
+        </livre>
+        <magazine isbn="666" prix="100.00"/>
+
+    </etagere>
+    <etagere type="gothique" poussiere="true">
+        <livre isbn="003" prix="5.58">
+            <titre>Le Château d'Otrante</titre>
+            <auteur>
+                <prenom>Horace</prenom>
+                <nom>Walpole</nom>
+            </auteur>
+        </livre>
+    </etagere>
+    <etagere type="romance" poussiere="false"/>
+</bibliotheque>

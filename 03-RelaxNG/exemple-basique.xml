@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?xml-model href="exemple-basique.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <book>
     <page>This is page one.</page>
     <page>This is page two.</page>
