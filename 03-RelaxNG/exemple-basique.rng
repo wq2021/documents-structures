@@ -1,8 +1,34 @@
-<element name="book"
-    xmlns="http://relaxng.org/ns/structure/1.0">
-    <oneOrMore>
-        <element name="page">
-            <text/>
-        </element>
-    </oneOrMore>
+<element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0">
+
+    <element name="etagere">
+        <attribute name="type"/>
+        <optional>
+            <attribute name="poussiere"/>
+        </optional>
+        
+        <oneOrMore>
+            <element name="livre">
+                
+                <attribute name="isbn"/>
+                <attribute name="prix"/>
+                <element name="titre">
+                    <text/>
+                </element>
+                
+                <element name="auteur">
+                    <optional>
+                        <attribute name="nom"/>
+                        <attribute name="prenom"/>
+                    </optional>
+                    <optional>
+                        <element name="nom"><text/></element>
+                        <element name="prenom"><text/></element>
+                    </optional>
+                </element>
+                
+            </element>                    
+        </oneOrMore>
+    </element>  
 </element>
+
+            
