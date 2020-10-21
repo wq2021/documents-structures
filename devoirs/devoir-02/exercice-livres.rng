@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0">
 <oneOrMore>
     <element name="etagere">
