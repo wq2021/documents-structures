@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="mondial">
+            <ref name="continent"/>
+            <ref name="pays"/>
+        </element>
+    </start>
+    <define name="continent">
+        <oneOrMore>
+            <element name="continent">
+                <ref name="att.identification"/>
+                <empty/>
+            </element>
+        </oneOrMore>
+    </define>
+    <define name="pays">
+        <oneOrMore>
+            <element name="country">
+                <ref name="att.identification"/>
+                <ref name="att.others"/>
+                <empty/>
+                <ref name="country.composition"/>
+            </element>
+        </oneOrMore>
+    </define>
+    <define name="att.identification">
+        <attribute name="id" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+            <data type="ID"/>
+        </attribute>
+        <attribute name="name" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+            <data type="string"/>
+        </attribute>
+    </define>
+    <define name="att.others">
+        <ref name="att.others.gdp"/>
+    </define>
+    <define name="att.others.gdp">
+        <ref name="att.others.gdp.total"/>
+        <attribute name="gdp_agri"/>
+    </define>
+    <define name="att.others.gdp.total">
+        <attribute name="gdp_total" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+            <data type="positiveInteger"/>
+        </attribute>
+    </define>
+    <define name="generique.name">
+        <element name="name">
+            <text/>
+        </element>
+    </define>
+    <define name="country.composition">
+        <ref name="generique.name"/>
+        <ref name="ville"/>
+    </define>
+    <define name="coordonnees.lat">
+        <attribute name="latitude"/>
+    </define>
+    <define name="ville">
+        <oneOrMore>
+            <ref name="city"/>
+        </oneOrMore>
+    </define>
+    <define name="city">
+        <element name="city">
+            <ref name="coordonnees"/>
+            <ref name="city.contenu"/>
+        </element>
+    </define>
+    <define name="coordonnees">
+        <ref name="coordonnees.long"/>
+        <ref name="coordonnees.lat"/>
+    </define>
+    <define name="coordonnees.long">
+        <attribute name="longitude"/>
+    </define>
+    <define name="city.contenu">
+        <ref name="generique.name"/>
+        <element name="population" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+            ns="inalco:documents-structures:ns">
+            <data type="long"/>
+        </element>
+        <optional>
+            <element name="located_at">
+                <empty/>
+            </element>
+        </optional>
+    </define>
+</grammar>

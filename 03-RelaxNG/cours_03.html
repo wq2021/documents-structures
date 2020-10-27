@@ -775,6 +775,23 @@ On appelle `<a:documentation> ... </a:documentation>` pour décrire ce que l'on 
 </element>
 ```
 
+---
+## Exemple de schéma : la TEI
+
+La TEI se base sur RelaxNG et Schematron pour encadrer son vocabulaire.
+
+`http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_minimal.rng`
+
+Exercice
+- modifier le schéma pour autoriser l'ajout d'un attribut "couverture" sur l'élement `<title>` `/TEI/teiHeader/titleStmt/title`.
+L'attribut a pour type de données un booléen
+- supprimer les attributs globaux de rendus sur la balise `<p>`
+
+---
+## Exercice
+
+A partir du document `factbook-minimal.rng`, générer le document xml associé
+
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="factbook-minimal.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<mondial>
+    <continent id="A01" name="as">   
+    </continent>    
+    <continent id="A02" name="eu">
+    </continent>
+    
+    <country id="C33" name="fr" gdp_agri="500" gdp_total="5000">
+        <name>France</name>
+        <city latitude="48N" longitude="2E">
+            <name>Paris</name>
+            <population xmlns="inalco:documents-structures:ns">12568755</population>
+            <located_at></located_at>
+        </city>
+        <city latitude="49N" longitude="4E">
+            <name>Reims</name>
+            <population xmlns="inalco:documents-structures:ns">182460</population>
+        </city>
+    </country>
+    
+    <country id="C354" name="is" gdp_agri="100" gdp_total="1000">
+        <name>Iceland</name>
+        <city longitude="21W" latitude="64N">
+            <name>Reykjavik</name>
+            <population xmlns="inalco:documents-structures:ns">128793</population>
+            <located_at></located_at>
+        </city>
+        <city longitude="18W" latitude="65N">
+            <name>Akureyri</name>
+            <population xmlns="inalco:documents-structures:ns">18925</population>
+        </city>
+    </country>
+    
+    <country id="C358" name="fi" gdp_agri="200" gdp_total="2000">
+        <name>Finland</name>
+        <city longitude="24E" latitude="60N">
+            <name>Helsinki</name>
+            <population xmlns="inalco:documents-structures:ns">642045</population>
+            <located_at></located_at>
+        </city>
+        <city longitude="23E" latitude="61N">
+            <name>Tampere</name>
+            <population xmlns="inalco:documents-structures:ns">230834</population>
+        </city>
+    </country>
+    
+</mondial>
