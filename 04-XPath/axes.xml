@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Document pour tester les différentes axes selon l'image "axes.gif"
+    Mettre son curseur sur la balise <soi> et tester
+    Par exemple : preceding::*
+    https://nwalsh.com/docs/tutorials/xsl/xsl/foil22.html
+-->
+<racine>
+    <ancetre>
+        <precedant/>
+        <precedant/>
+        <parent>
+            <precedant-frere>
+                <enfant/>
+            </precedant-frere>
+            <precedant-frere/>
+            <soi><!--ici-->
+                <enfant/>
+                <enfant>
+                    <petit-enfant/>
+                    <petit-enfant/>
+                </enfant>
+                <enfant/>
+                <enfant/>
+                <enfant>
+                    <petit-enfant/>
+                    <petit-enfant/>
+                </enfant>
+            </soi>
+            <suivant-frere/>
+            <suivant-frere>
+                <enfant/>
+            </suivant-frere>
+        </parent>
+        <suivant/>
+        <suivant/>
+    </ancetre>
+</racine>

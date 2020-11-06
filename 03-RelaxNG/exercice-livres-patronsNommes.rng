@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <ref name="Bibliotheque"/>
+    </start>
+
+    <define name="Bibliotheque">
+        <element name="bibliotheque">
+            <oneOrMore>
+                <ref name="Etagere"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="Etagere">
+        <element name="etagere">
+            <attribute name="type"/>
+            <optional>
+                <ref name="Poussiere"/>
+            </optional>
+            <zeroOrMore>
+                <ref name="Livre"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="Poussiere">
+        <attribute name="poussiere">
+            <data type="boolean"/>
+        </attribute>
+    </define>
+    <define name="Livre">
+        <element name="livre">
+            <attribute name="isbn">
+                <data type="int"/>
+            </attribute>
+            <attribute name="prix">
+                <data type="float"/>
+            </attribute>
+            <ref name="Titre"/>
+            <ref name="Auteur"/>
+        </element>
+    </define>
+    <define name="Titre">
+        <element name="titre">
+            <text/>
+        </element>
+    </define>
+    <define name="Auteur">
+        <element name="auteur">
+            <choice>
+                <group>
+                    <attribute name="nom"/>
+                    <attribute name="prenom"/>
+                </group>
+                <group>
+                    <interleave>
+                        <element name="nom">
+                            <text/>
+                        </element>
+                        <element name="prenom">
+                            <text/>
+                        </element>
+                    </interleave>
+                </group>
+            </choice>
+        </element>
+    </define>
+</grammar>

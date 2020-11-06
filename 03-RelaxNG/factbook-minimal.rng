@@ -21,7 +21,10 @@
             <element name="country">
                 <ref name="att.identification"/>
                 <ref name="att.others"/>
+<<<<<<< HEAD
                 <empty/>
+=======
+>>>>>>> upstream/master
                 <ref name="country.composition"/>
             </element>
         </oneOrMore>
