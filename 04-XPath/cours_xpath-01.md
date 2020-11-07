@@ -15,7 +15,7 @@ La version 1.0 est la plus largement implémentée, mais nous verrons les versio
 XPath s'utilise généralement avec XSLT, Xquery, les bases de données XML ou bien les parsers XML.
 
 ---
-## Navigation
+## Navigation
 
 Un document XML est une structure arborescente.
 
@@ -72,9 +72,9 @@ Voir [https://stackoverflow.com/questions/1022345/current-node-vs-context-node-i
 | `descendant` | les nœuds fils du nœud courant ainsi que leurs descendants. |
 | `descendant-or-self` | comme pour descendant, mais on se sélectionne également |
 | `ancestor` | les nœuds parents du nœud courant ainsi que leurs ancêtres. |
-| `descendant-or-self` | comme pour ancestor, mais on se sélectionne également |
+| `ancestor-or-self` | comme pour ancestor, mais on se sélectionne également |
 
-La différence entre `child/parent` et `descendant/ancestor` est que dans le cas de child et parent, on s'arrête au niveau précédant/suivant.
+La différence entre `child/parent` et `descendant/ancestor` est que dans le cas de `child` et `parent`, on s'arrête au niveau précédant/suivant.
 Alors que `descendant` et `ancestor` sont récursifs, c'est-à-dire qu'ils vont remonter ou descendre jusqu'au début/fin du document XML.
 
 ---
@@ -105,14 +105,14 @@ Le prédicat permet d'exprimer des conditions sur l'axe.
 `child::livre` : les nœuds enfants appelés `<livre>`
 
 On peut également appliquer une condition sur le prédicat (if ...).
-La syntaxe est  ̀predicat[condition]`.
+La syntaxe est `predicat[condition]`.
 
 `child::livre[text() = 'Documents Structurés']` : les nœuds enfants appelés `<livre>` qui ont pour valeur textuelle 'Documents Structurés'.
 
 Un prédicat peut lui-même être une expression XPath.
 
-`child::livre[child::page[not(child::footnoot)]]` : les nœuds enfants `<livre> qui ont des `<page>` ne contenant pas de `<footnote>`
-`child::livre[2]` : le second nœud enfant `<livre>`
+- `child::livre[child::page[not(child::footnoot)]]` : les nœuds enfants `<livre>` qui ont des `<page>` ne contenant pas de `<footnote>`
+- `child::livre[2]` : le second nœud enfant `<livre>`
 
 Lorsque l'on utile les crochets `[]`, on ne se déplace pas sur l'axe. Le déplacement est induit par le slash `/`.
 Les deux exemples suivants n'expriment pas la même chose. Le premier cas, on se déplace sur `<livre>` puis `<page>`. Le second cas, sélectionne les `<livre>` qui ont `<page>` pour enfant.
@@ -134,7 +134,7 @@ Il existe des notations abrégées pour simplifier la syntaxe.
 | `.//*` | `descendant::*` | tous les nœuds descendant du nœud courant |
 | `@id` | `attribute::id` | l'attribut id du nœud courant |
 | `/` | `ancestor-or-self::*[position() = last()]` | la racine du document |
-| `//*` | /descendant-or-self | tous les nœuds de l'arbre |
+| `//*` | `/descendant-or-self` | tous les nœuds de l'arbre |
 
 Il est possible de mélanger les notations abrégrées avec les notations complètes.
 
@@ -142,6 +142,7 @@ Il est possible de mélanger les notations abrégrées avec les notations compl�
 ## Exercice
 
 [https://developer.mozilla.org/en-US/docs/Web/XPath/Functions](https://developer.mozilla.org/en-US/docs/Web/XPath/Functions)
+Ou mieux [https://www.w3.org/TR/xpath-functions/](https://www.w3.org/TR/xpath-functions/)
 
 ### Partie 1
 
@@ -169,7 +170,7 @@ Il est possible de mélanger les notations abrégrées avec les notations compl�
 20. Afficher les noeuds textes avec plus de 140 caractères
 21. Afficher tous les noeuds `juicer` avec une url en `.html`
 
-### Partie 2
+### Partie 2
 
 À partir du fichier `PDV.xml`
 

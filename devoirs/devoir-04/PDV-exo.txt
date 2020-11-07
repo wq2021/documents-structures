@@ -1,0 +1,26 @@
+
+1. /pdv_liste
+2. //pdv/*
+3. //ville/text()
+4. //pdv[46]
+5. //pdv/prix[last()]
+6. //pdv[@id="3150005"]
+7. //pdv[services[not(service[text()="GPL"])]]
+8. //following-sibling::*
+9. //pdv[@cp="16170"]/ville/text()
+10. //pdv[ouverture[@saufjour="Lundi"]]
+11. //pdv[services[service="Relais colis"]]
+12. //*[last()-9][text()="Piste poids lourds"]
+13. //pdv[rupture/@début[contains(data(),"2013-02-04")] and rupture/@nom="SP95"]/ville/text()
+14. //pdv[not(fermeture)]
+15. boolean(//pdv[ville[text()="La Mure" or text()="LA MURE"]]/prix[@nom="E10"])
+16. count(//pdv)
+17. //adresse/string-length(.)
+18. max(//adresse/string-length(.))
+19. //pdv[ouverture[not(@fin="20:00")]]
+20. //pdv/prix/@nom[data()]/lower-case(data())
+21. //pdv/@latitude[contains(data(),".")]/replace(data(),"\.","--")
+22.
+for $date in //prix/@maj/substring-before(data()," ")
+for $heure in //prix/@maj/substring-after(data()," ")
+return concat($heure,"T",$date)

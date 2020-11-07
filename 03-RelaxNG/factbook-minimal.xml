@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="factbook-minimal.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mondial>
+    <continent id="f0_119" name="Europe"/>
+    <continent id="f0_123" name="Asia"/>
+    <continent id="f0_126" name="America"/>
+    <continent id="f0_129" name="Australia/Oceania"/>
+    <continent id="f0_132" name="Africa"/>
+    <country id="f0_136" name="Albania" gdp_agri="55" gdp_total="4100">
+        <name>Albania</name>
+        <city longitude="10.7" latitude="46.2">
+            <name>Tirane</name>
+            <population xmlns="inalco:documents-structures:ns">192000</population>
+        </city>
+        <city longitude="19.2" latitude="42.2">
+            <name>Shkoder</name>
+            <population xmlns="inalco:documents-structures:ns">62000</population>
+            <located_at/>
+        </city>
+    </country>
+    <country id="f0_179" name="Croatia" gdp_agri="12.7" gdp_total="20100">
+        <name>Croatia</name>
+        <city longitude="19.2" latitude="42.2">
+            <name>Zagreb</name>
+            <population xmlns="inalco:documents-structures:ns">2000000</population>
+        </city>
+    </country>
+</mondial>
