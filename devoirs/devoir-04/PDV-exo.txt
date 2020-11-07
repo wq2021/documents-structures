@@ -1,4 +1,3 @@
-
 1. /pdv_liste
 2. //pdv/*
 3. //ville/text()
@@ -20,7 +19,6 @@
 19. //pdv[ouverture[not(@fin="20:00")]]
 20. //pdv/prix/@nom[data()]/lower-case(data())
 21. //pdv/@latitude[contains(data(),".")]/replace(data(),"\.","--")
-22.
-for $date in //prix/@maj/substring-before(data()," ")
-for $heure in //prix/@maj/substring-after(data()," ")
-return concat($heure,"T",$date)
+22. for $date in //prix/@maj/substring-before(data()," ")
+    for $heure in //prix/@maj/substring-after(data()," ")
+    return concat($heure,"T",$date)
