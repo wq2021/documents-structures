@@ -16,7 +16,7 @@ C'est une suite ordonnée de valeurs atomiques (string, float, integer, …) et/
 
 Le résultat d'une requête Xpath est une séquence. On voit bien sur l'image ci-dessous que la fonction `string()` qui prend en argument un seul item retourne une erreur, car le résultat de `//juicer/name` est une séquence. Il faut donc écrire `//juicer/name/string()` où la fonction `string()` sera appliquée à chaque résultat. Cependant, le résultat retourné sera toujours une séquence contenant des string.
 
-![img-sequences.png](img-sequences.png)
+![img-sequences.png](img/img-sequences.png)
 
 ---
 Si on exécute la requête `//name/string()` le résultat sera la séquence suivante 

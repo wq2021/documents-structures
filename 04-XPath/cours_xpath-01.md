@@ -93,7 +93,7 @@ Alors que `descendant` et `ancestor` sont récursifs, c'est-à-dire qu'ils vont 
 
 Source : [https://nwalsh.com/docs/tutorials/xsl/xsl/foil22.html](https://nwalsh.com/docs/tutorials/xsl/xsl/foil22.html)
 
-![](axes.gif)
+![](img/axes.gif)
 
 Voir le fichier `axes.xml` pour tester les requêtes de ce document
 
@@ -141,8 +141,7 @@ Il est possible de mélanger les notations abrégrées avec les notations compl�
 ---
 ## Exercice
 
-[https://developer.mozilla.org/en-US/docs/Web/XPath/Functions](https://developer.mozilla.org/en-US/docs/Web/XPath/Functions)
-Ou mieux [https://www.w3.org/TR/xpath-functions/](https://www.w3.org/TR/xpath-functions/)
+[La documentation des fonctions sur le site de Saxon](https://www.saxonica.com/documentation/#!functions/fn)
 
 ### Partie 1
 
@@ -150,7 +149,6 @@ Ou mieux [https://www.w3.org/TR/xpath-functions/](https://www.w3.org/TR/xpath-fu
 
 1. Sélectionner la racine du document
 2. Tous les noeuds `juicer`
-3. Tous les noeuds `juicer` avec le contexte sur `<juicer>`
 4. Tous les noeuds `juicer` avec le chemin absolu
 5. Tous les noeuds attributs de `juicer`
 6. Le texte des noeuds attributs de `juicer`
