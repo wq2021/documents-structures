@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="exemple-03.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<livres>
+    <livre id="01" isbn="001">
+        <title>Un titre</title>
+        <p>Un paragraphe</p>
+    </livre>
+    <livre id="01" isbn="001">
+        <p>Un paragraphe</p>
+    </livre>
+    <livre isbn="001">
+        <title>Un titre</title>
+    </livre>
+</livres>
