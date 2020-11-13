@@ -24,7 +24,7 @@
     <sch:pattern abstract="true" id="div-head-scenes">
         
         <sch:rule context="$element">
-            <sch:assert test="self::$element/head and count(./head)=1"> L'élément <sch:name/> doit avoir un head.</sch:assert>
+            <sch:assert test="count(./head)=1"> L'élément <sch:name/> doit avoir un head.</sch:assert>
             <sch:assert test= "$type-div='act'" > Le type de cet élément est l'acte.</sch:assert>
             <sch:assert test= "/count($sous-element) > 1" > Le nombre des sous-éléments sont plus que 1.</sch:assert>
         </sch:rule>
