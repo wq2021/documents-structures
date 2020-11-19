@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="exemple-namespace-01.xsl"?>
+
+<racine xmlns="uri:namespace">
+    <titre>Bonjour !</titre>
+</racine>

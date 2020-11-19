@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- voir le document résultat tei-sortie.xml-->
+
+<document>
+    <metadonnee>
+        <auteurs>
+            <auteur type="principal">Moi</auteur>
+            <auteur type="secondaire">Quelqu'un d'autre</auteur>
+        </auteurs>
+        
+        <description>
+            <publication>Une ressource créée pour s'exercer.</publication>
+            <source>Issue de mon imagination.</source>
+        </description>
+    </metadonnee>
+    
+    <contenu>
+        <div>
+            <titre>Consigne</titre>
+            <para>Il va falloir transformer le document XML en ce document TEI.</para>
+        </div>
+    </contenu>
+</document>

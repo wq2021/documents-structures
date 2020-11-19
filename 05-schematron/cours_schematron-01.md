@@ -51,7 +51,11 @@ Le patron contient lui-même un élément `<rule context="">` où l'on indique l
     
     <sch:pattern>
         <sch:rule context="prix">
+<<<<<<< HEAD
             <sch:report test="not(contains(@prix, '€'))" role="warn">
+=======
+            <sch:report test="not(contains(@pvaleur, '€'))" role="warn">
+>>>>>>> upstream/master
                 Le prix devait peut-être indiqué une monnaie.</sch:report>
         </sch:rule>
     </sch:pattern>
@@ -80,7 +84,11 @@ Il est possible de déclarer des variables pour éviter de répeter des requête
 On utilise l'élément `let` sur lequel on ajoute deux attributs : `@name` pour nommer la variable et `@value` pour indiquer sa valeur.
 
 ```xml
+<<<<<<< HEAD
 <let name="pdv" value="/pdv_liste/pdv"
+=======
+<let name="pdv" value="/pdv_liste/pdv"/>
+>>>>>>> upstream/master
 
 <assert test="$pdv/count(prix) >= 1 ">Il faut avoir au moins un prix</assert>
 ```

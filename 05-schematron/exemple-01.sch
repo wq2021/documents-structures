@@ -8,7 +8,11 @@
     
     <sch:pattern>
         <sch:rule context="prix">
+<<<<<<< HEAD
             <sch:report test="not(contains(@prix, '€'))" role="warn">
+=======
+            <sch:report test="not(contains(@valeur, '€'))" role="warn">
+>>>>>>> upstream/master
                 Le prix devait peut-être indiqué une monnaie.</sch:report>
         </sch:rule>
     </sch:pattern>
