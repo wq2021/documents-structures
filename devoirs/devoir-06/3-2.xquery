@@ -8,12 +8,12 @@ declare function local:frequence($texte as xs:string) as element(mot)*{
     let $tokenisation := tokenize($normalisation,' ')
     
     for $mot in distinct-values($tokenisation)
-    let $frequence := count($tokenisation[. eq $mot])
+    let $frequence := count($tokenisation[. = $mot])
     let $element := element mot {attribute frequence {$frequence},$mot}
     return $element
     
 };
 
- let $phrase := "Une phrase pour tester la fonction la pour"
+ let $phrase := "Une phrase pour tester la fonction La pour"
  let $resultat := <dictionnaire>{local:frequence($phrase)}</dictionnaire>
  return $resultat
